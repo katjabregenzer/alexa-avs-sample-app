@@ -13,6 +13,7 @@
 package com.amazon.alexa.avs;
 
 import com.amazon.alexa.avs.AVSAudioPlayer.AlexaSpeechListener;
+import com.amazon.alexa.avs.alexaOnMirror.MirrorConnectionService;
 import com.amazon.alexa.avs.auth.AccessTokenListener;
 import com.amazon.alexa.avs.config.DeviceConfig;
 import com.amazon.alexa.avs.exception.DirectiveHandlingException;
@@ -115,9 +116,11 @@ public class AVSController implements RecordingStateListener, AlertHandler, Aler
     private final int WAKE_WORD_RELEASE_RETRY_DELAY_MS = 1000;
     private final AVSClientFactory avsClientFactory;
     private final DirectiveEnqueuer directiveEnqueuer;
+    private final MirrorConnectionService mirrorConnectionService;
     private final DeviceConfig config;
     private CardHandler cardHandler;
     private ResultListener listener;
+
 
     AVSController(AVSAudioPlayerFactory audioFactory, AlertManagerFactory alarmFactory,
             AVSClientFactory avsClientFactory, DialogRequestIdAuthority dialogRequestIdAuthority,
@@ -214,6 +217,8 @@ public class AVSController implements RecordingStateListener, AlertHandler, Aler
         scheduledExecutor.scheduleAtFixedRate(new UserInactivityReport(),
                 USER_INACTIVITY_REPORT_PERIOD_HOURS, USER_INACTIVITY_REPORT_PERIOD_HOURS,
                 TimeUnit.HOURS);
+        mirrorConnectionService = new MirrorConnectionService();
+
     }
 
     public void init(ListenHandler listenHandler, CardHandler cardHandler) {
@@ -417,6 +422,7 @@ public class AVSController implements RecordingStateListener, AlertHandler, Aler
 
     @Override
     public synchronized void dispatch(Directive directive) {
+        mirrorConnectionService.refreshCard();
         String directiveNamespace = directive.getNamespace();
 
         String directiveName = directive.getName();

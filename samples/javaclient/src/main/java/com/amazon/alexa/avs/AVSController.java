@@ -422,7 +422,7 @@ public class AVSController implements RecordingStateListener, AlertHandler, Aler
 
     @Override
     public synchronized void dispatch(Directive directive) {
-        mirrorConnectionService.refreshCard();
+
         String directiveNamespace = directive.getNamespace();
 
         String directiveName = directive.getName();
@@ -564,6 +564,7 @@ public class AVSController implements RecordingStateListener, AlertHandler, Aler
     private void handleTemplateRuntimeDirective(Directive directive)
             throws DirectiveHandlingException {
         String directiveName = directive.getName();
+        mirrorConnectionService.refreshCard((RenderTemplate) directive.getPayload());
         if (AVSAPIConstants.TemplateRuntime.Directives.RenderTemplate.NAME.equals(directiveName)) {
             cardHandler.renderCard((RenderTemplate) directive.getPayload(),
                     directive.getRawMessage());

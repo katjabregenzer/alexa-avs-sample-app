@@ -564,7 +564,7 @@ public class AVSController implements RecordingStateListener, AlertHandler, Aler
     private void handleTemplateRuntimeDirective(Directive directive)
             throws DirectiveHandlingException {
         String directiveName = directive.getName();
-        mirrorConnectionService.refreshCard((RenderTemplate) directive.getPayload());
+        mirrorConnectionService.refreshCard( directive.getRawMessage());
         if (AVSAPIConstants.TemplateRuntime.Directives.RenderTemplate.NAME.equals(directiveName)) {
             cardHandler.renderCard((RenderTemplate) directive.getPayload(),
                     directive.getRawMessage());

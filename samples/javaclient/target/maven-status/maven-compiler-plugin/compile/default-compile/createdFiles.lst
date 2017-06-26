@@ -151,6 +151,7 @@ com\amazon\alexa\avs\AVSAPIConstants$Speaker$Directives.class
 com\amazon\alexa\avs\AVSAPIConstants$Speaker.class
 com\amazon\alexa\avs\auth\AuthConstants.class
 com\amazon\alexa\avs\DataStore$ResultListener.class
+com\amazon\alexa\avs\alexaOnMirror\MirrorConnectionService.class
 com\amazon\alexa\avs\auth\OAuth2AccessToken.class
 com\amazon\alexa\avs\auth\companionapp\LWAException.class
 com\amazon\alexa\avs\AVSAPIConstants$AudioPlayer$Events$PlaybackStopped.class

@@ -134,6 +134,7 @@ C:\Users\kbregenzer\workspace\alexa-avs-sample-app\samples\javaclient\src\main\j
 C:\Users\kbregenzer\workspace\alexa-avs-sample-app\samples\javaclient\src\main\java\com\amazon\alexa\avs\http\MessageParser.java
 C:\Users\kbregenzer\workspace\alexa-avs-sample-app\samples\javaclient\src\main\java\com\amazon\alexa\avs\StateTransition.java
 C:\Users\kbregenzer\workspace\alexa-avs-sample-app\samples\javaclient\src\main\java\com\amazon\alexa\avs\wakeword\NewWakeWordReadyInterface.java
+C:\Users\kbregenzer\workspace\alexa-avs-sample-app\samples\javaclient\src\main\java\com\amazon\alexa\avs\alexaOnMirror\MirrorConnectionService.java
 C:\Users\kbregenzer\workspace\alexa-avs-sample-app\samples\javaclient\src\main\java\com\amazon\alexa\avs\message\request\settings\SettingsUpdatedPayload.java
 C:\Users\kbregenzer\workspace\alexa-avs-sample-app\samples\javaclient\src\main\java\com\amazon\alexa\avs\message\request\RequestBody.java
 C:\Users\kbregenzer\workspace\alexa-avs-sample-app\samples\javaclient\src\main\java\com\amazon\alexa\avs\ui\MainWindow.java

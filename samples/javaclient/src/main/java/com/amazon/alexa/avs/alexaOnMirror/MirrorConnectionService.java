@@ -2,7 +2,7 @@ package com.amazon.alexa.avs.alexaOnMirror;
 
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.api.ContentResponse;
-import org.eclipse.jetty.util.Fields;
+import org.eclipse.jetty.http.HttpMethod;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,11 +20,10 @@ public class MirrorConnectionService {
             final SslContextFactory sslContextFactory = new SslContextFactory();
             HttpClient httpClient = new HttpClient(sslContextFactory);
             httpClient.start();
-
-            Fields fields = new Fields();
-
-            fields.put("card", payload);
-            final ContentResponse contentResponse = httpClient.FORM(URL, fields);
+            final ContentResponse contentResponse = httpClient.newRequest(URL).method(HttpMethod.POST)
+                    .param("card", payload)
+                    .agent("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:17.0) Gecko/20100101 Firefox/17.0")
+                    .send();
             log.debug(contentResponse.getContentAsString());
 
         } catch (Exception e) {

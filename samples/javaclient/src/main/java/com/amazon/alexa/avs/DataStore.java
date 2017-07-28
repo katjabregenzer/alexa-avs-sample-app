@@ -13,7 +13,6 @@
 package com.amazon.alexa.avs;
 
 public interface DataStore<T> {
-
     void loadFromDisk(ResultListener<T> listener);
 
     void writeToDisk(T payload, ResultListener<T> resultListener);

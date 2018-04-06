@@ -1,5 +1,8 @@
 ![](../../wiki/assets/alexa-logo-3.png)
 
+:warning: Starting January 25, 2018, the AVS Java Sample App will be put into maintenance mode. To leverage the latest Alexa features, please use the [AVS Device SDK C++ Sample App, which you can find here](https://github.com/alexa/avs-device-sdk/wiki). To discuss any specific dependencies on the AVS Java Sample App, feel free to reach out to us [here](https://www.amazon.com/forms/231ff404-261e-454c-917d-97208d9ea268).
+
+
 ## About the project
 
 This project provides a step-by-step walkthrough to help you build a **hands-free** [Alexa Voice Service](https://developer.amazon.com/avs) (AVS) prototype in 60 minutes, using wake word engines from [Sensory](https://github.com/Sensory/alexa-rpi) or [KITT.AI](https://github.com/Kitt-AI/snowboy). Now, in addition to pushing a button to "start listening", you can now also just say the wake word "Alexa", much like the [Amazon Echo](https://amazon.com/echo). You can find step-by-step instructions to set up the hands-free prototype on [Raspberry Pi](../../wiki/Raspberry-Pi), or follow the instructions to set up the push-to-talk only prototype on [Linux](../../wiki/Linux), [Mac](../../wiki/Mac), or [Windows](../../wiki/Windows).
@@ -10,7 +13,7 @@ This project provides a step-by-step walkthrough to help you build a **hands-fre
 
 [Alexa Voice Service](https://developer.amazon.com/avs) (AVS) is Amazon’s intelligent voice recognition and natural language understanding service that allows you as a developer to voice-enable any connected device that has a microphone and speaker.
 
---- 
+---
 
 ## Get started
 
@@ -29,7 +32,49 @@ Or you can prototype with these third-party dev kits -
 
 ---
 
-## What's new?  
+## What's new?
+
+**January 31, 2018:** 
+
+*Updates*
+
+* Added support for Australia/New Zealand.
+* Added support in the Pi automated script for Java 1.8.161 and 1.8.162.
+
+**January 25, 2018:** 
+
+*Important*  
+
+* The AVS Java Sample App is in maintenance mode. To leverage the latest Alexa features, please use the [AVS Device SDK C++ Sample App, which you can find here](https://github.com/alexa/avs-device-sdk/wiki). To discuss any specific dependencies on the AVS Java Sample App, feel free to reach out to us [here](https://www.amazon.com/forms/231ff404-261e-454c-917d-97208d9ea268).
+
+**December 3, 2017:** 
+
+*Updates*  
+
+* Added support for these locales: Canada, India, and Japan.   
+
+*Known Issues*  
+ 
+* A pause command followed by play/resume results in playback from the beginning of the audio item instead of the offset provided when the audio item was paused.
+
+**October 11, 2017:**
+
+*Updates*
+
+* Added support to automatically detect if the AVS Java Sample App should start in headless mode.
+* Added support for Raspbian Stretch.
+
+*Known Issues*
+
+* Error running the WakeWordAgent with Stretch on Pi 2.
+
+**July 6, 2017:**
+
+*Updates*
+
+* The sample app has been updated to support Notifications.
+  * Enable the [Quote Maker](https://www.amazon.com/dp/B071ZMZWF7/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1499374636&sr=1-1&keywords=quote+maker) skill, located in the Alexa Skills Store to test Notifications with the AVS Sample App.
+* Added a login/logout button.
 
 **June 21, 2017:**  
 
@@ -56,7 +101,7 @@ Or you can prototype with these third-party dev kits -
 
 **April 27, 2017:**
 
-*Updates* 
+*Updates*
 
 * Need help troubleshooting the AVS Sample App? Check out the new [Troubleshooting Guide](https://github.com/alexa/alexa-avs-sample-app/wiki/Troubleshooting).
 
@@ -101,9 +146,8 @@ Or you can prototype with these third-party dev kits -
 
 ---
 
-## Contribute 
+## Contribute
 
 * Want to report a bug or request an update to the documentation? See [CONTRIBUTING.md](https://github.com/alexa/alexa-avs-sample-app/blob/master/CONTRIBUTING.md).
 * Having trouble? Check out our [troubleshooting guide](../../wiki/Troubleshooting).
 * Have questions or need help building the sample app? Open a [new issue](https://github.com/alexa/alexa-avs-sample-app/issues/new).
-
